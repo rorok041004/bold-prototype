@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>BOLD - Konsultasi</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00A99D", // Teal Green
+                        "secondary": "#0A2E5D", // Navy Blue
+                        "background-light": "#F0F2F5",
+                        "background-dark": "#102222",
+                        "text-light": "#111818",
+                        "text-dark": "#E5E7EB",
+                        "subtext-light": "#6c757d",
+                        "subtext-dark": "#9CA3AF"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem", // 8px
+                        "lg": "0.75rem", // 12px
+                        "xl": "1rem", // 16px
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="relative mx-auto flex h-auto min-h-screen w-full max-w-md flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden pb-28">
+    <!-- Top App Bar -->
+    <header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+        <div class="flex items-center p-4">
+            <button class="flex h-12 w-12 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-transparent text-secondary dark:text-primary" onclick="window.location.href='dashboard.html'">
+                <span class="material-symbols-outlined text-2xl">arrow_back</span>
+            </button>
+            <h2 class="text-secondary dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Konsultasi</h2>
+        </div>
+    </header>
+    <main class="flex-grow px-4 py-4">
+        <!-- Deskripsi Fitur -->
+        <h1 class="text-secondary dark:text-text-dark tracking-tight text-[28px] font-bold leading-tight pb-2">Pesan Konsultasi</h1>
+        <p class="text-subtext-light dark:text-subtext-dark text-base font-normal leading-normal pb-4">Dapatkan saran ahli untuk kebutuhan listrik Anda dari kontraktor berpengalaman.</p>
+        
+        <!-- Form Pemesanan -->
+        <form class="flex flex-col gap-4">
+            <div class="relative">
+                <label class="block text-sm font-medium text-secondary dark:text-text-dark mb-1">Topik Konsultasi</label>
+                <select class="w-full h-12 rounded-lg border border-neutral-200 dark:border-neutral-200/20 bg-white dark:bg-gray-800 pl-4 pr-4 text-secondary dark:text-white focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all">
+                    <option>Energi Terbarukan</option>
+                    <option>Desain Instalasi</option>
+                    <option>Audit Listrik</option>
+                    <option>Lainnya</option>
+                </select>
+            </div>
+            <div class="relative">
+                <label class="block text-sm font-medium text-secondary dark:text-text-dark mb-1">Deskripsi</label>
+                <textarea class="w-full h-32 rounded-lg border border-neutral-200 dark:border-neutral-200/20 bg-white dark:bg-gray-800 p-4 text-secondary dark:text-white focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" placeholder="Jelaskan apa yang ingin Anda konsultasikan..."></textarea>
+            </div>
+            <div class="relative">
+                <label class="block text-sm font-medium text-secondary dark:text-text-dark mb-1">Lokasi (Opsional)</label>
+                <input class="w-full h-12 rounded-lg border border-neutral-200 dark:border-neutral-200/20 bg-white dark:bg-gray-800 pl-4 pr-4 text-secondary dark:text-white placeholder:text-subtext-light dark:placeholder:text-subtext-dark focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" placeholder="Masukkan alamat jika diperlukan" type="text"/>
+            </div>
+            <div class="relative">
+                <label class="block text-sm font-medium text-secondary dark:text-text-dark mb-1">Tanggal Diinginkan</label>
+                <input class="w-full h-12 rounded-lg border border-neutral-200 dark:border-neutral-200/20 bg-white dark:bg-gray-800 pl-4 pr-4 text-secondary dark:text-white focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" type="date"/>
+            </div>
+            <button type="submit" class="flex items-center justify-center rounded-lg bg-primary text-white h-12 px-5 font-bold shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 transition-shadow">Kirim Permintaan</button>
+        </form>
+    </main>
+    <!-- Bottom Navigation Bar -->
+    <nav class="fixed bottom-0 left-0 right-0 z-10 mx-auto max-w-md border-t border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
+        <div class="grid h-16 grid-cols-4">
+            <a class="flex flex-col items-center justify-center gap-1 text-subtext-light dark:text-subtext-dark" href="dashboard.html">
+                <span class="material-symbols-outlined">home</span>
+                <span class="text-xs font-medium">Beranda</span>
+            </a>
+            <a class="flex flex-col items-center justify-center gap-1 text-subtext-light dark:text-subtext-dark" href="#">
+                <span class="material-symbols-outlined">receipt_long</span>
+                <span class="text-xs font-medium">Booking</span>
+            </a>
+            <a class="flex flex-col items-center justify-center gap-1 text-subtext-light dark:text-subtext-dark" href="#">
+                <span class="material-symbols-outlined">chat_bubble</span>
+                <span class="text-xs font-medium">Pesan</span>
+            </a>
+            <a class="flex flex-col items-center justify-center gap-1 text-subtext-light dark:text-subtext-dark" href="#">
+                <span class="material-symbols-outlined">person</span>
+                <span class="text-xs font-medium">Profil</span>
+            </a>
+        </div>
+    </nav>
+</div>
+</body>
+</html>

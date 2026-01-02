@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>BOLD - Pesan</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00A99D", // Teal Green
+                        "secondary": "#0A2E5D", // Navy Blue
+                        "background-light": "#F0F2F5",
+                        "background-dark": "#102222",
+                        "text-light": "#111818",
+                        "text-dark": "#E5E7EB",
+                        "subtext-light": "#6c757d",
+                        "subtext-dark": "#9CA3AF"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem", // 8px
+                        "lg": "0.75rem", // 12px
+                        "xl": "1rem", // 16px
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="relative mx-auto flex h-auto min-h-screen w-full max-w-md flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden pb-28">
+    <!-- Top App Bar -->
+    <header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+        <div class="flex items-center p-4">
+            <span class="material-symbols-outlined text-secondary dark:text-primary mr-2 text-2xl">chat_bubble</span>
+            <h2 class="text-secondary dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1">Pesan</h2>
+        </div>
+    </header>
+    <main class="flex-grow px-4 py-4">
+        <!-- Daftar Pesan -->
+        <h1 class="text-secondary dark:text-text-dark tracking-tight text-[28px] font-bold leading-tight pb-2">Kotak Masuk</h1>
+        <p class="text-subtext-light dark:text-subtext-dark text-base font-normal leading-normal pb-4">Komunikasi dengan kontraktor dan dukungan.</p>
+        
+        <!-- Contoh Item Pesan -->
+        <div class="flex flex-col gap-4">
+            <a href="#" class="flex items-center rounded-xl bg-white dark:bg-gray-800 p-4 shadow-sm">
+                <div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-primary">
+                    <span class="material-symbols-outlined">person</span>
+                </div>
+                <div class="ml-4 flex-1">
+                    <h3 class="font-bold text-secondary dark:text-text-dark">Andi Listrik Pro</h3>
+                    <p class="text-sm text-subtext-light dark:text-subtext-dark">Konfirmasi jadwal instalasi...</p>
+                </div>
+                <span class="text-sm text-subtext-light dark:text-subtext-dark">10:45</span>
+            </a>
+            <a href="#" class="flex items-center rounded-xl bg-white dark:bg-gray-800 p-4 shadow-sm">
+                <div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-primary">
+                    <span class="material-symbols-outlined">person</span>
+                </div>
+                <div class="ml-4 flex-1">
+                    <h3 class="font-bold text-secondary dark:text-text-dark">Dukungan BOLD</h3>
+                    <p class="text-sm text-subtext-light dark:text-subtext-dark">Terima kasih atas feedback Anda...</p>
+                </div>
+                <span class="text-sm text-subtext-light dark:text-subtext-dark">Kemarin</span>
+            </a>
+            <!-- Tambahkan lebih banyak item jika diperlukan -->
+        </div>
+    </main>
+    <!-- Bottom Navigation Bar -->
+    <nav class="fixed bottom-0 left-0 right-0 z-10 mx-auto max-w-md border-t border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
+        <div class="grid h-16 grid-cols-4">
+            <a class="flex flex-col items-center justify-center gap-1 text-subtext-light dark:text-subtext-dark" href="dashboard.html">
+                <span class="material-symbols-outlined">home</span>
+                <span class="text-xs font-medium">Beranda</span>
+            </a>
+            <a class="flex flex-col items-center justify-center gap-1 text-subtext-light dark:text-subtext-dark" href="booking.html">
+                <span class="material-symbols-outlined">receipt_long</span>
+                <span class="text-xs font-medium">Booking</span>
+            </a>
+            <a class="flex flex-col items-center justify-center gap-1 text-primary" href="pesan.html">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+                <span class="text-xs font-bold">Pesan</span>
+            </a>
+            <a class="flex flex-col items-center justify-center gap-1 text-subtext-light dark:text-subtext-dark" href="profil.html">
+                <span class="material-symbols-outlined">person</span>
+                <span class="text-xs font-medium">Profil</span>
+            </a>
+        </div>
+    </nav>
+</div>
+</body>
+</html>

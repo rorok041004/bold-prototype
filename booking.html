@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>BOLD - Booking</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00A99D", // Teal Green
+                        "secondary": "#0A2E5D", // Navy Blue
+                        "background-light": "#F0F2F5",
+                        "background-dark": "#102222",
+                        "text-light": "#111818",
+                        "text-dark": "#E5E7EB",
+                        "subtext-light": "#6c757d",
+                        "subtext-dark": "#9CA3AF"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem", // 8px
+                        "lg": "0.75rem", // 12px
+                        "xl": "1rem", // 16px
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="relative mx-auto flex h-auto min-h-screen w-full max-w-md flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden pb-28">
+    <!-- Top App Bar -->
+    <header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+        <div class="flex items-center p-4">
+            <span class="material-symbols-outlined text-secondary dark:text-primary mr-2 text-2xl">receipt_long</span>
+            <h2 class="text-secondary dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1">Booking Saya</h2>
+        </div>
+    </header>
+    <main class="flex-grow px-4 py-4">
+        <!-- Daftar Booking -->
+        <h1 class="text-secondary dark:text-text-dark tracking-tight text-[28px] font-bold leading-tight pb-2">Riwayat Booking</h1>
+        <p class="text-subtext-light dark:text-subtext-dark text-base font-normal leading-normal pb-4">Lihat semua booking Anda di sini.</p>
+        
+        <!-- Contoh Item Booking -->
+        <div class="flex flex-col gap-4">
+            <div class="rounded-xl bg-white dark:bg-gray-800 p-4 shadow-sm">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-bold text-secondary dark:text-text-dark">Instalasi Baru - Rumah</h3>
+                    <span class="text-sm text-primary">Sedang Diproses</span>
+                </div>
+                <p class="text-sm text-subtext-light dark:text-subtext-dark mt-2">Tanggal: 15 Januari 2024</p>
+                <p class="text-sm text-subtext-light dark:text-subtext-dark">Kontraktor: Andi Listrik Pro</p>
+                <div class="mt-4 flex justify-end">
+                    <button class="text-primary font-medium text-sm">Detail</button>
+                </div>
+            </div>
+            <div class="rounded-xl bg-white dark:bg-gray-800 p-4 shadow-sm">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-bold text-secondary dark:text-text-dark">Perbaikan - Konsleting</h3>
+                    <span class="text-sm text-green-600">Selesai</span>
+                </div>
+                <p class="text-sm text-subtext-light dark:text-subtext-dark mt-2">Tanggal: 10 Januari 2024</p>
+                <p class="text-sm text-subtext-light dark:text-subtext-dark">Kontraktor: Jaya Elektrikal</p>
+                <div class="mt-4 flex justify-end">
+                    <button class="text-primary font-medium text-sm">Detail</button>
+                </div>
+            </div>
+            <!-- Tambahkan lebih banyak item jika diperlukan -->
+        </div>
+    </main>
+    <!-- Bottom Navigation Bar -->
+    <nav class="fixed bottom-0 left-0 right-0 z-10 mx-auto max-w-md border-t border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
+        <div class="grid h-16 grid-cols-4">
+            <a class="flex flex-col items-center justify-center gap-1 text-subtext-light dark:text-subtext-dark" href="dashboard.html">
+                <span class="material-symbols-outlined">home</span>
+                <span class="text-xs font-medium">Beranda</span>
+            </a>
+            <a class="flex flex-col items-center justify-center gap-1 text-primary" href="booking.html">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+                <span class="text-xs font-bold">Booking</span>
+            </a>
+            <a class="flex flex-col items-center justify-center gap-1 text-subtext-light dark:text-subtext-dark" href="pesan.html">
+                <span class="material-symbols-outlined">chat_bubble</span>
+                <span class="text-xs font-medium">Pesan</span>
+            </a>
+            <a class="flex flex-col items-center justify-center gap-1 text-subtext-light dark:text-subtext-dark" href="profil.html">
+                <span class="material-symbols-outlined">person</span>
+                <span class="text-xs font-medium">Profil</span>
+            </a>
+        </div>
+    </nav>
+</div>
+</body>
+</html>
